@@ -12,6 +12,7 @@ public class Script {
 	public static void lanzarScript() throws InterruptedException {
 		ProcessBuilder pb = new ProcessBuilder("bash","-lc","./script.sh Manu").directory(new File ("/home/manu/git_proyectos/actividadesPSP/src/ej10/"));
 		pb.inheritIO(); 
+		pb.environment().put("PRUEBA", "🌹");
 		try {
 			Process p = pb.start(); 
 			int codigo = p.waitFor(); 
