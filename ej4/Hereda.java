@@ -11,7 +11,6 @@ public class Hereda {
 	public static void heredarComando() {
 		ProcessBuilder pb = new ProcessBuilder("top", "-b", "-n1");
         pb.inheritIO(); 
-
         try {
             Process proceso = pb.start();
             proceso.waitFor();
